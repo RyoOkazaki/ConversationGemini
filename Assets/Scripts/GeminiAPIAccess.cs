@@ -18,13 +18,13 @@ public class GeminiAPIAccess : MonoBehaviour
             return _instance;
         }
     }
-
-    [Header("Google Cloud API Key")] [SerializeField]
-    private string apiKey = "";
-
-    public string GeminiAPIURL => $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={apiKey}";
-    public string TextToSpeechURL => $"https://texttospeech.googleapis.com/v1/text:synthesize?key={apiKey}";
-    public string SpeechToTextURL => $"https://speech.googleapis.com/v1/speech:recognize?key={apiKey}";
+    
+    [SerializeField] private string geminiAPIKey = "";
+    [SerializeField] private string modelVersion = "gemini-2.0-flash";
+    
+    public string GeminiAPIURL => $"https://generativelanguage.googleapis.com/v1beta/models/{modelVersion}:generateContent?key={geminiAPIKey}";
+    public string TextToSpeechURL => $"https://texttospeech.googleapis.com/v1/text:synthesize?key={geminiAPIKey}";
+    public string SpeechToTextURL => $"https://speech.googleapis.com/v1/speech:recognize?key={geminiAPIKey}";
 
     private void Awake()
     {

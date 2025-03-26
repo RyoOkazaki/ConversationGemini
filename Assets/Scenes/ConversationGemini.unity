@@ -2301,7 +2301,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fb6391b7e321b49b5dc8f20bdcc3fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiKey: 
+  geminiAPIKey: 
+  modelVersion: gemini-2.0-flash
 --- !u!1 &643121580
 GameObject:
   m_ObjectHideFlags: 0
